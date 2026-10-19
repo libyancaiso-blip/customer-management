@@ -1,0 +1,12 @@
+{
+  "name": "منظومة إدارة بيانات العملاء",
+  "short_name": "إدارة العملاء",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f6",
+  "theme_color": "#145b50",
+  "description": "إدارة محلية لبيانات العملاء وحالات الحسابات"
+}
