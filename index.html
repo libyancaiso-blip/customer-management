@@ -88,7 +88,36 @@ function editRecord(x){editId.value=x.id;['name','phone','national','passport','
 async function exportCSV(){let a=await all(),rows=[['الاسم','الهاتف','الرقم الوطني','جواز السفر','المصرف','رقم الحساب','الحالة','تاريخ الحجز'],...a.map(x=>[x.name,x.phone,x.national,x.passport,x.bank,x.account,x.status,x.date])];let csv='\\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\\r\\n');download(new Blob([csv],{type:'text/csv;charset=utf-8'}),'صخر-العرب-العملاء.csv')}
 async function backup(){let a=await all();download(new Blob([JSON.stringify({app:'Sakhr Al Arab',version:1,created:new Date().toISOString(),customers:a},null,2)],{type:'application/json'}),'نسخة-احتياطية-صخر-العرب.json')}
 function download(blob,name){let u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)}
-function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=async()=>{try{let j=JSON.parse(r.result);if(!Array.isArray(j.customers))throw Error();if(!confirm('ستتم إضافة السجلات الموجودة في النسخة إلى السجلات الحالية. متابعة؟'))return;for(let x of j.customers){delete x.id;await put(x)}await refresh();alert('تمت استعادة البيانات')}catch(_){alert('ملف النسخة غير صالح')}e.target.value=''};r.readAsText(f)}
+function restore(e){
+ let f=e.target.files[0]; if(!f)return;
+ let r=new FileReader();
+ r.onload=async()=>{
+  try{
+   let j=JSON.parse(r.result);
+   // يدعم النسخ القديمة (records) والجديدة (customers)، وكذلك المصفوفة المباشرة.
+   let rows=Array.isArray(j)?j:(Array.isArray(j.customers)?j.customers:(Array.isArray(j.records)?j.records:null));
+   if(!rows || !rows.every(x=>x && typeof x==='object' && !Array.isArray(x))) throw Error('format');
+   if(!confirm('سيتم إضافة '+rows.length+' سجلاً إلى البيانات الحالية دون حذفها. هل تريد المتابعة؟')) return;
+   for(let x of rows){
+    let item={
+     name:String(x.name??x.customerName??x.fullName??'').trim(),
+     phone:String(x.phone??x.mobile??'').trim(),
+     national:String(x.national??x.nationalId??x.nationalNumber??'').trim(),
+     passport:String(x.passport??x.passportNumber??'').trim(),
+     account:String(x.account??x.accountNumber??'').trim(),
+     bank:String(x.bank??x.bankName??'').trim(),
+     status:String(x.status??x.state??'محجوز').trim(),
+     date:String(x.date??x.bookingDate??'').trim()
+    };
+    if(!item.name && !item.phone && !item.national && !item.passport && !item.account) continue;
+    await put(item);
+   }
+   await refresh(); alert('تمت استعادة النسخة بنجاح');
+  }catch(err){alert('تعذر استعادة الملف. تأكد من أن النسخة JSON سليمة ومن إصدار المنظومة.')}
+  finally{e.target.value=''}
+ };
+ r.readAsText(f,'UTF-8');
+}
 today.textContent=new Date().toLocaleDateString('ar-LY');
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 </script>
