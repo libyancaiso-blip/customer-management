@@ -1,12 +1,19 @@
 {
-  "name": "منظومة إدارة بيانات العملاء",
-  "short_name": "إدارة العملاء",
+  "name": "منظومة صخر العرب لمعاملات الأغراض الشخصية 2000$",
+  "short_name": "صخر العرب",
   "lang": "ar",
   "dir": "rtl",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f7f6",
-  "theme_color": "#145b50",
-  "description": "إدارة محلية لبيانات العملاء وحالات الحسابات"
+  "background_color": "#f3f6fa",
+  "theme_color": "#071d3a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

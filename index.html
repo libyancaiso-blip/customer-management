@@ -2,100 +2,94 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#145b50">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="إدارة العملاء">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071d3a">
+<meta name="description" content="منظومة صخر العرب لمعاملات الأغراض الشخصية 2000 دولار">
 <link rel="manifest" href="manifest.webmanifest">
-<title>منظومة إدارة بيانات العملاء</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>صخر العرب | معاملات الأغراض الشخصية</title>
 <style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:#172b27;background:#f3f7f6;--green:#145b50;--line:#d9e4e1;--muted:#61736e}
-*{box-sizing:border-box}body{margin:0}header{background:var(--green);color:white;padding:22px 16px 18px}header h1{font-size:22px;margin:0 0 6px}header p{margin:0;font-size:13px;opacity:.9}.wrap{max-width:900px;margin:auto;padding:14px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:14px}.stat,.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:14px}.stat small{display:block;color:var(--muted);font-size:12px}.stat strong{font-size:25px;display:block;margin-top:4px}.panel{margin-bottom:14px}.panel h2{font-size:17px;margin:0 0 13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-size:13px;margin-bottom:5px;color:#40544f}.field input,.field select,.toolbar input,.toolbar select{width:100%;min-width:0;border:1px solid #cbd9d5;border-radius:9px;padding:12px;background:white;font-size:16px;color:#172b27}.field.full{grid-column:1/-1}.buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.btn{border:1px solid #cbd9d5;border-radius:9px;padding:11px 13px;font-size:14px;font-weight:600;background:white;color:#1b3831;cursor:pointer}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.danger{color:#9b2727}.toolbar{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}.toolbar .search{grid-column:1/-1}.record{border-top:1px solid var(--line);padding:13px 0}.record:first-child{border-top:0}.recordtop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.record h3{font-size:16px;margin:0}.badge{font-size:12px;padding:5px 8px;border-radius:20px;background:#e9f2ef;white-space:nowrap}.details{font-size:13px;line-height:1.8;color:#52645f;margin-top:6px;overflow-wrap:anywhere}.recordactions{display:flex;gap:7px;margin-top:8px}.hint{font-size:12px;line-height:1.7;color:var(--muted)}.notice{background:#fff8e5;border:1px solid #ead8a4;border-radius:10px;padding:11px;font-size:12px;line-height:1.7;margin-bottom:14px}.empty{color:var(--muted);font-size:13px;padding:12px 0}.hidden{display:none!important}footer{text-align:center;color:var(--muted);font-size:12px;padding:8px 0 24px}
-@media(max-width:430px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.toolbar{grid-template-columns:1fr}.toolbar .search{grid-column:auto}}
-@media print{body{background:white}header{background:white;color:black;padding:8px 0}.wrap{max-width:none;padding:0}.no-print,form,.notice,footer{display:none!important}.panel,.stat{border:0;padding:6px}.stats{grid-template-columns:repeat(4,1fr)}.record{break-inside:avoid}.details{color:black}.badge{border:1px solid #aaa;background:white}}
+:root{--navy:#071d3a;--navy2:#0d315b;--gold:#d7a943;--ink:#102a49;--muted:#718198;--line:#e2eaf2;--bg:#f3f6fa;--white:#fff;--green:#138765;--red:#d94c54;--blue:#2675c8;--orange:#d88927}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink)}
+header{background:linear-gradient(125deg,#06172f,#103b68);color:white;padding:22px 18px 26px;border-bottom:4px solid var(--gold);border-radius:0 0 24px 24px}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:58px;height:58px}.brand h1{font-size:18px;line-height:1.5;margin:0}.brand p{margin:3px 0 0;color:#d6e2f0;font-size:12px}
+.wrap{max-width:900px;margin:auto;padding:16px}.welcome{display:flex;justify-content:space-between;align-items:center;margin:7px 2px 14px}.welcome h2{font-size:18px;margin:0}.welcome small{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{background:white;border:1px solid var(--line);border-radius:15px;padding:14px;box-shadow:0 3px 12px #09264a08}.stat span{font-size:12px;color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:7px;color:var(--navy)}.stat b{display:inline-block;width:8px;height:8px;border-radius:50%;margin-left:5px;background:var(--gold)}
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:16px 0}.btn{border:0;border-radius:12px;padding:13px 12px;font-size:14px;font-weight:700;cursor:pointer;min-height:46px}.primary{background:var(--navy2);color:white}.gold{background:#fff5df;color:#805811;border:1px solid #f0d99f}.light{background:white;color:var(--navy);border:1px solid var(--line)}.danger{background:#fff0f0;color:var(--red);border:1px solid #f5d0d0}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;box-shadow:0 3px 12px #09264a08}.panel h3{margin:0 0 13px;font-size:16px}.field{margin:10px 0}.field label{display:block;font-size:12px;font-weight:700;color:#52657c;margin-bottom:6px}.field input,.field select{width:100%;min-height:45px;border:1px solid #d7e1eb;border-radius:10px;padding:10px 12px;background:#fbfdff;color:var(--ink);font-size:16px;outline-color:var(--gold)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}.searchrow{display:flex;gap:8px}.searchrow input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:16px}
+.record{border:1px solid var(--line);border-radius:13px;padding:12px;margin:9px 0;display:flex;gap:10px;align-items:center}.avatar{width:42px;height:42px;flex:none;border-radius:12px;background:#eaf1f8;color:var(--navy2);display:grid;place-items:center;font-weight:800}.info{min-width:0;flex:1}.info strong{display:block;font-size:14px}.info small{display:block;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:20px;padding:5px 8px;font-size:11px;font-weight:700;margin-top:6px}.محجوز{background:#fff0f0;color:var(--red)}.مطابق{background:#eaf3ff;color:var(--blue)}.غير-مطابق{background:#fff5e6;color:var(--orange)}.تم-التنفيذ{background:#e8f7f1;color:var(--green)}
+.record-actions{display:flex;flex-direction:column;gap:5px}.mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 9px;color:var(--navy);font-size:12px}
+nav{display:flex;gap:7px;overflow:auto;margin:16px 0 8px}nav button{white-space:nowrap;background:#e8eef5;color:#415873;border:0;border-radius:22px;padding:10px 14px;font-size:13px}nav button.active{background:var(--navy);color:white}
+.hidden{display:none!important}.foot{text-align:center;color:#8a98a9;font-size:11px;padding:18px}
+@media(min-width:650px){.stats{grid-template-columns:repeat(4,1fr)}.actions{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.brand h1{font-size:16px}.record{align-items:flex-start}}
 </style>
 </head>
 <body>
-<header><h1>منظومة إدارة بيانات العملاء</h1><p>تسجيل ومتابعة حالات الحسابات — نسخة محلية تجريبية</p></header>
+<header><div class="brand"><img src="icon.svg" alt="شعار صخر العرب"><div><h1>منظومة صخر العرب<br>لمعاملات الأغراض الشخصية 2000$</h1><p>إدارة منظمة • متابعة دقيقة • حفظ محلي على الجهاز</p></div></div></header>
 <main class="wrap">
-<div class="notice"><strong>تنبيه خصوصية:</strong> هذه النسخة تحفظ البيانات داخل مساحة المتصفح على هذا الجهاز فقط. لا تدخل بيانات حقيقية قبل اختبار النسخة وإعداد نسخة احتياطية. لا تنتقل البيانات تلقائيًا بين الأجهزة، وقد تُفقد إذا حُذفت بيانات المتصفح أو أزيل التطبيق. الحفظ المحلي هنا ليس تشفيرًا متخصصًا.</div>
-<section class="stats no-print">
-<div class="stat"><small>إجمالي العملاء</small><strong id="total">0</strong></div>
-<div class="stat"><small>محجوز</small><strong id="reserved">0</strong></div>
-<div class="stat"><small>مطابق</small><strong id="matched">0</strong></div>
-<div class="stat"><small>غير مطابق</small><strong id="mismatch">0</strong></div>
-<div class="stat"><small>تم التنفيذ</small><strong id="done">0</strong></div>
+<div class="welcome"><div><h2 id="sectionTitle">لوحة التحكم</h2><small>مرحباً بك في منظومتك</small></div><small id="today"></small></div>
+<section id="dashboard">
+<div class="stats">
+<div class="stat"><span><b></b>إجمالي العملاء</span><strong id="total">0</strong></div>
+<div class="stat"><span><b style="background:#d94c54"></b>محجوز</span><strong id="reserved">0</strong></div>
+<div class="stat"><span><b style="background:#2675c8"></b>مطابق</span><strong id="matched">0</strong></div>
+<div class="stat"><span><b style="background:#138765"></b>تم التنفيذ</span><strong id="done">0</strong></div>
+</div>
+<div class="actions">
+<button class="btn primary" onclick="show('form')">＋ إضافة عميل</button>
+<button class="btn gold" onclick="show('list')">☷ قائمة العملاء</button>
+<button class="btn light" onclick="exportCSV()">⇩ تصدير Excel</button>
+<button class="btn light" onclick="print()">▤ طباعة / PDF</button>
+</div>
+<div class="panel"><h3>ملخص الحالات</h3><div id="summary" style="color:#64758a;font-size:13px;line-height:2">لا توجد سجلات بعد.</div></div>
 </section>
-<section class="panel no-print">
-<h2 id="formTitle">إضافة عميل</h2>
-<form id="clientForm" autocomplete="off">
+<nav>
+<button class="active" data-page="dashboard" onclick="show('dashboard')">الرئيسية</button>
+<button data-page="form" onclick="newRecord()">إضافة عميل</button>
+<button data-page="list" onclick="show('list')">العملاء</button>
+<button data-page="backup" onclick="show('backup')">النسخ الاحتياطي</button>
+</nav>
+<section id="form" class="panel hidden">
+<h3 id="formTitle">إضافة عميل جديد</h3>
+<form id="customerForm">
 <input type="hidden" id="editId">
 <div class="grid">
-<div class="field"><label for="name">اسم العميل *</label><input id="name" maxlength="120" required></div>
-<div class="field"><label for="phone">رقم الهاتف *</label><input id="phone" inputmode="tel" maxlength="30" required></div>
-<div class="field"><label for="national">الرقم الوطني</label><input id="national" inputmode="numeric" maxlength="40"></div>
-<div class="field"><label for="passport">رقم جواز السفر</label><input id="passport" maxlength="40"></div>
-<div class="field"><label for="account">رقم الحساب المصرفي</label><input id="account" maxlength="70"></div>
-<div class="field"><label for="bank">المصرف</label><select id="bank"><option value="">اختر المصرف</option></select></div>
-<div class="field"><label for="status">حالة الحساب *</label><select id="status" required><option>محجوز</option><option>مطابق</option><option>غير مطابق</option><option>تم التنفيذ</option></select></div>
-<div class="field"><label for="date">تاريخ الحجز</label><input id="date" type="date"></div>
+<div class="field"><label>اسم العميل *</label><input id="name" required autocomplete="off"></div>
+<div class="field"><label>رقم الهاتف *</label><input id="phone" inputmode="tel" required></div>
+<div class="field"><label>الرقم الوطني</label><input id="national"></div>
+<div class="field"><label>رقم جواز السفر</label><input id="passport"></div>
+<div class="field"><label>اسم المصرف</label><select id="bank"><option>مصرف الجمهورية</option><option>مصرف الوحدة</option><option>مصرف الصحارى</option><option>مصرف التجارة والتنمية</option><option>مصرف شمال أفريقيا</option><option>مصرف الأمان</option><option>مصرف الواحة</option><option>مصرف المتوسط</option><option>مصرف النوران</option><option>مصرف ليبيا المركزي</option><option>مصرف آخر</option></select></div>
+<div class="field"><label>رقم الحساب المصرفي</label><input id="account"></div>
+<div class="field"><label>حالة المعاملة</label><select id="status"><option>محجوز</option><option>مطابق</option><option>غير مطابق</option><option>تم التنفيذ</option></select></div>
+<div class="field"><label>تاريخ الحجز</label><input id="date" type="date"></div>
 </div>
-<div class="buttons"><button class="btn primary" type="submit" id="saveBtn">حفظ العميل</button><button class="btn" type="button" id="cancelEdit" hidden>إلغاء التعديل</button><button class="btn" type="reset">مسح الحقول</button></div>
-<p id="message" class="hint" aria-live="polite"></p>
-</form>
-</section>
-<section class="panel">
-<h2>سجل العملاء</h2>
-<div class="toolbar no-print">
-<div class="search"><label class="hint" for="search">بحث بالاسم أو الهاتف أو الرقم الوطني أو الجواز أو الحساب</label><input id="search" placeholder="اكتب كلمة البحث..."></div>
-<div><label class="hint" for="filter">تصفية الحالة</label><select id="filter"><option value="">كل الحالات</option><option>محجوز</option><option>مطابق</option><option>غير مطابق</option><option>تم التنفيذ</option></select></div>
-<div><label class="hint" for="sort">ترتيب السجلات</label><select id="sort"><option value="new">الأحدث إضافة</option><option value="name">الاسم</option><option value="date">تاريخ الحجز</option></select></div>
-</div>
-<div id="records"><div class="empty">جارٍ تحميل السجلات...</div></div>
-<div class="buttons no-print">
-<button class="btn" id="exportCsv" type="button">تصدير Excel (CSV)</button>
-<button class="btn" id="printPdf" type="button">طباعة / حفظ PDF</button>
-<button class="btn" id="backup" type="button">نسخة احتياطية</button>
-<button class="btn" id="restoreBtn" type="button">استعادة نسخة</button><input id="restoreFile" class="hidden" type="file" accept=".json,application/json">
-<button class="btn danger" id="deleteAll" type="button">حذف جميع السجلات</button>
-</div>
-<p class="hint no-print">ملف CSV يفتح في Excel. لإنشاء PDF اضغط «طباعة / حفظ PDF» ثم اختر «حفظ كـ PDF» في نافذة الطباعة إن كان الخيار متاحًا. النسخة الاحتياطية بصيغة JSON لإعادة الاستعادة داخل التطبيق.</p>
-</section>
-<footer>منظومة محلية — لا ترسل البيانات إلى أي خادم في هذه النسخة.</footer>
+<div class="actions"><button class="btn primary" type="submit">حفظ البيانات</button><button class="btn light" type="button" onclick="show('list')">إلغاء</button></div>
+</form></section>
+<section id="list" class="panel hidden"><h3>قائمة العملاء</h3><div class="searchrow"><input id="search" placeholder="ابحث بالاسم أو الهاتف أو الرقم الوطني..." oninput="renderList()"></div><div id="records" style="margin-top:10px"></div></section>
+<section id="backup" class="panel hidden"><h3>النسخ الاحتياطي والاستعادة</h3><p style="font-size:13px;color:#64758a;line-height:1.8">أنشئ نسخة احتياطية دورياً واحفظها في مكان آمن. ملف النسخة يحتوي على بيانات العملاء كاملة.</p><div class="actions"><button class="btn primary" onclick="backup()">تنزيل نسخة احتياطية</button><label class="btn light" style="display:grid;place-items:center">استعادة نسخة<input type="file" accept="application/json" id="restoreFile" hidden onchange="restore(event)"></label></div></section>
+<div class="foot">صخر العرب © — البيانات تحفظ محلياً في هذا المتصفح على جهازك</div>
 </main>
 <script>
-const BANKS=["مصرف الجمهورية","مصرف الوحدة","المصرف التجاري الوطني","مصرف شمال أفريقيا","مصرف الصحارى","مصرف الأمان","مصرف التجارة والتنمية","المصرف الليبي الخارجي","مصرف المتوسط","مصرف النوران","مصرف الواحة","مصرف الإجماع العربي","مصرف اليقين","مصرف الاستثمار العربي الإسلامي","مصرف السراي","مصرف التضامن","مصرف الخليج الأول الليبي","مصرف الوفاء","مصرف الأندلس","مصرف آخر"];
-const STATUSES=["محجوز","مطابق","غير مطابق","تم التنفيذ"];
-const FIELDS=["name","phone","national","passport","account","bank","status","date"];
-const LABELS=["اسم العميل","رقم الهاتف","الرقم الوطني","رقم جواز السفر","رقم الحساب المصرفي","المصرف","حالة الحساب","تاريخ الحجز"];
-const $=id=>document.getElementById(id);
-let db, records=[], nextId=1;
-const bankSelect=$("bank"); BANKS.forEach(b=>{let o=document.createElement("option");o.value=b;o.textContent=b;bankSelect.appendChild(o)});
-function openDB(){return new Promise((resolve,reject)=>{let req=indexedDB.open("ClientManagerLocalDB",1);req.onupgradeneeded=()=>{let d=req.result;if(!d.objectStoreNames.contains("clients"))d.createObjectStore("clients",{keyPath:"id",autoIncrement:true});};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
-function allRecords(){return new Promise((resolve,reject)=>{let req=db.transaction("clients","readonly").objectStore("clients").getAll();req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
-function writeRecord(r){return new Promise((resolve,reject)=>{let tx=db.transaction("clients","readwrite"),store=tx.objectStore("clients");r.id?store.put(r):store.add(r);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
-function deleteRecord(id){return new Promise((resolve,reject)=>{let tx=db.transaction("clients","readwrite");tx.objectStore("clients").delete(id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
-function clearRecords(){return new Promise((resolve,reject)=>{let tx=db.transaction("clients","readwrite");tx.objectStore("clients").clear();tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
-function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function updateStats(){ $("total").textContent=records.length;$("reserved").textContent=records.filter(r=>r.status==="محجوز").length;$("matched").textContent=records.filter(r=>r.status==="مطابق").length;$("mismatch").textContent=records.filter(r=>r.status==="غير مطابق").length;$("done").textContent=records.filter(r=>r.status==="تم التنفيذ").length; }
-function visibleRecords(){let q=$("search").value.trim().toLocaleLowerCase("ar"),status=$("filter").value;let a=records.filter(r=>(!status||r.status===status)&&FIELDS.some(f=>String(r[f]||"").toLocaleLowerCase("ar").includes(q)));let sort=$("sort").value;if(sort==="name")a.sort((x,y)=>x.name.localeCompare(y.name,"ar"));else if(sort==="date")a.sort((x,y)=>(y.date||"").localeCompare(x.date||""));else a.sort((x,y)=>y.id-x.id);return a;}
-function render(){updateStats();let list=visibleRecords();if(!list.length){$("records").innerHTML='<div class="empty">لا توجد سجلات مطابقة.</div>';return;}
-$("records").innerHTML=list.map(r=>`<article class="record"><div class="recordtop"><h3>${esc(r.name)}</h3><span class="badge">${esc(r.status)}</span></div><div class="details">الهاتف: ${esc(r.phone)}<br>المصرف: ${esc(r.bank||"غير محدد")}<br>الرقم الوطني: ${esc(r.national||"—")}<br>رقم الجواز: ${esc(r.passport||"—")}<br>رقم الحساب: ${esc(r.account||"—")}<br>تاريخ الحجز: ${esc(r.date||"—")}</div><div class="recordactions no-print"><button class="btn" data-edit="${r.id}">تعديل</button><button class="btn danger" data-delete="${r.id}">حذف</button></div></article>`).join("");}
-function resetForm(){ $("clientForm").reset();$("editId").value="";$("formTitle").textContent="إضافة عميل";$("saveBtn").textContent="حفظ العميل";$("cancelEdit").hidden=true;$("message").textContent=""; }
-$("clientForm").addEventListener("submit",async e=>{e.preventDefault();let obj={};FIELDS.forEach(f=>obj[f]=$(f).value.trim());if(!obj.name||!obj.phone){$("message").textContent="الاسم ورقم الهاتف مطلوبان.";return;}let id=Number($("editId").value)||undefined;if(id)obj.id=id;try{await writeRecord(obj);await refresh();resetForm();$("message").textContent=id?"تم تحديث السجل.":"تم حفظ العميل على هذا الجهاز.";}catch(err){$("message").textContent="تعذر حفظ السجل. تأكد من توفر مساحة في المتصفح.";console.error(err);}});
-$("records").addEventListener("click",async e=>{let edit=e.target.closest("[data-edit]"),del=e.target.closest("[data-delete]");if(edit){let r=records.find(x=>x.id===Number(edit.dataset.edit));if(!r)return;FIELDS.forEach(f=>$(f).value=r[f]||"");$("editId").value=r.id;$("formTitle").textContent="تعديل بيانات العميل";$("saveBtn").textContent="حفظ التعديلات";$("cancelEdit").hidden=false;window.scrollTo({top:0,behavior:"smooth"});}if(del){let id=Number(del.dataset.delete);if(confirm("هل تريد حذف سجل هذا العميل؟")){await deleteRecord(id);await refresh();}}});
-$("cancelEdit").addEventListener("click",resetForm);["search","filter","sort"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
-async function refresh(){records=await allRecords();nextId=records.reduce((m,r)=>Math.max(m,r.id+1),1);render();}
-function csvCell(v){return '"'+String(v??"").replace(/"/g,'""')+'"';}
-function download(name,content,type){let blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1200);}
-$("exportCsv").addEventListener("click",()=>{let list=visibleRecords();if(!list.length){alert("لا توجد سجلات لتصديرها.");return;}let rows=[LABELS,...list.map(r=>FIELDS.map(f=>r[f]||""))];download("بيانات_العملاء.csv","\ufeff"+rows.map(row=>row.map(csvCell).join(",")).join("\r\n"),"text/csv;charset=utf-8;");});
-$("printPdf").addEventListener("click",()=>{let list=visibleRecords();if(!list.length){alert("لا توجد سجلات للطباعة.");return;}window.print();});
-$("backup").addEventListener("click",()=>download("نسخة_احتياطية_العملاء.json",JSON.stringify({app:"ClientManager",version:1,createdAt:new Date().toISOString(),records},null,2),"application/json;charset=utf-8"));
-$("restoreBtn").addEventListener("click",()=>$("restoreFile").click());
-$("restoreFile").addEventListener("change",async e=>{let file=e.target.files[0];if(!file)return;try{let data=JSON.parse(await file.text());if(!data||!Array.isArray(data.records)||!confirm("ستُضاف سجلات النسخة إلى السجلات الحالية. هل تريد المتابعة؟"))return;for(let r of data.records){let obj={};FIELDS.forEach(f=>obj[f]=String(r[f]??""));if(!obj.name)continue;await writeRecord(obj);}await refresh();alert("تمت استعادة السجلات.");}catch(err){alert("تعذر قراءة النسخة الاحتياطية. تأكد من اختيار ملف JSON صحيح.");}finally{e.target.value="";}});
-$("deleteAll").addEventListener("click",async()=>{if(confirm("تحذير: سيتم حذف جميع سجلات العملاء من هذا المتصفح. هل أنت متأكد؟")&&confirm("تأكد من امتلاك نسخة احتياطية قبل المتابعة. حذف جميع السجلات نهائي من داخل التطبيق؟")){await clearRecords();await refresh();resetForm();}});
-(async()=>{try{db=await openDB();await refresh();if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});}catch(e){$("records").innerHTML='<div class="empty">تعذر تفعيل التخزين المحلي في هذا المتصفح. افتح التطبيق عبر متصفح حديث يدعم IndexedDB.</div>';console.error(e);}})();
+const DB='sakhr-arab-customers', STORE='customers';let db;
+const req=indexedDB.open(DB,1);
+req.onupgradeneeded=()=>req.result.createObjectStore(STORE,{keyPath:'id',autoIncrement:true});
+req.onsuccess=()=>{db=req.result;refresh()};
+function all(){return new Promise((ok,no)=>{let r=db.transaction(STORE).objectStore(STORE).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}
+function put(x){return new Promise((ok,no)=>{let t=db.transaction(STORE,'readwrite'),s=t.objectStore(STORE),r=x.id?s.put(x):s.add(x);r.onsuccess=()=>ok();r.onerror=()=>no(r.error)})}
+function del(id){return new Promise(ok=>{let r=db.transaction(STORE,'readwrite').objectStore(STORE).delete(Number(id));r.onsuccess=()=>ok()})}
+async function refresh(){let a=await all();let c=s=>a.filter(x=>x.status===s).length;total.textContent=a.length;reserved.textContent=c('محجوز');matched.textContent=c('مطابق');done.textContent=c('تم التنفيذ');summary.textContent=`محجوز: ${c('محجوز')} • مطابق: ${c('مطابق')} • غير مطابق: ${c('غير مطابق')} • تم التنفيذ: ${c('تم التنفيذ')}`;renderList()}
+function show(p){['dashboard','form','list','backup'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==p));sectionTitle.textContent={dashboard:'لوحة التحكم',form:'بيانات العميل',list:'قائمة العملاء',backup:'النسخ الاحتياطي'}[p];document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p))}
+function newRecord(){customerForm.reset();editId.value='';formTitle.textContent='إضافة عميل جديد';date.value=new Date().toISOString().slice(0,10);show('form')}
+customerForm.onsubmit=async e=>{e.preventDefault();let x={name:name.value.trim(),phone:phone.value.trim(),national:national.value.trim(),passport:passport.value.trim(),bank:bank.value,account:account.value.trim(),status:status.value,date:date.value};if(!x.name||!x.phone)return alert('يرجى إدخال الاسم ورقم الهاتف');if(editId.value)x.id=Number(editId.value);await put(x);customerForm.reset();editId.value='';await refresh();show('list')};
+async function renderList(){if(!db)return;let a=await all(),q=(search?.value||'').trim().toLowerCase();a=a.filter(x=>[x.name,x.phone,x.national,x.account].join(' ').toLowerCase().includes(q));records.innerHTML='';if(!a.length){records.textContent='لا توجد سجلات مطابقة.';return}a.sort((x,y)=>y.id-x.id).forEach(x=>{let d=document.createElement('div');d.className='record';let av=document.createElement('div');av.className='avatar';av.textContent=(x.name||'?').slice(0,1);let info=document.createElement('div');info.className='info';let strong=document.createElement('strong');strong.textContent=x.name;let small=document.createElement('small');small.textContent=`${x.phone} • ${x.bank} • ${x.date||'دون تاريخ'}`;let badge=document.createElement('span');badge.className='badge '+x.status.replace(' ','-');badge.textContent=x.status;info.append(strong,small,badge);let acts=document.createElement('div');acts.className='record-actions';let edit=document.createElement('button');edit.className='mini';edit.textContent='تعديل';edit.onclick=()=>editRecord(x);let remove=document.createElement('button');remove.className='mini';remove.textContent='حذف';remove.onclick=async()=>{if(confirm('هل تريد حذف هذا العميل؟')){await del(x.id);refresh()}};acts.append(edit,remove);d.append(av,info,acts);records.append(d)})}
+function editRecord(x){editId.value=x.id;['name','phone','national','passport','bank','account','status','date'].forEach(k=>document.getElementById(k).value=x[k]||'');formTitle.textContent='تعديل بيانات العميل';show('form')}
+async function exportCSV(){let a=await all(),rows=[['الاسم','الهاتف','الرقم الوطني','جواز السفر','المصرف','رقم الحساب','الحالة','تاريخ الحجز'],...a.map(x=>[x.name,x.phone,x.national,x.passport,x.bank,x.account,x.status,x.date])];let csv='\\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\\r\\n');download(new Blob([csv],{type:'text/csv;charset=utf-8'}),'صخر-العرب-العملاء.csv')}
+async function backup(){let a=await all();download(new Blob([JSON.stringify({app:'Sakhr Al Arab',version:1,created:new Date().toISOString(),customers:a},null,2)],{type:'application/json'}),'نسخة-احتياطية-صخر-العرب.json')}
+function download(blob,name){let u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)}
+function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=async()=>{try{let j=JSON.parse(r.result);if(!Array.isArray(j.customers))throw Error();if(!confirm('ستتم إضافة السجلات الموجودة في النسخة إلى السجلات الحالية. متابعة؟'))return;for(let x of j.customers){delete x.id;await put(x)}await refresh();alert('تمت استعادة البيانات')}catch(_){alert('ملف النسخة غير صالح')}e.target.value=''};r.readAsText(f)}
+today.textContent=new Date().toLocaleDateString('ar-LY');
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 </script>
-</body>
-</html>
+</body></html>
