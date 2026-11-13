@@ -56,6 +56,24 @@ nav button.active{background:linear-gradient(145deg,#f6d48a,#bd8d3d);color:#1023
  nav{display:none!important}
  .print-card{color:#111}
  .print-header h1{color:#111}
+ #printArea{font-family:Arial,Tahoma,sans-serif}
+ .print-table{table-layout:auto;font-size:9pt;line-height:1.4}
+ .print-table th,.print-table td{padding:4pt 3pt;border-color:#aab5c2;vertical-align:middle;overflow-wrap:normal}
+ .print-table th{background:#eaf0f6!important;color:#132b45;font-weight:700}
+ .print-table thead{display:table-header-group}
+ .print-table tr{break-inside:avoid;page-break-inside:avoid}
+ .print-table :is(th,td):nth-child(1),
+ .print-table :is(th,td):nth-child(3),
+ .print-table :is(th,td):nth-child(4),
+ .print-table :is(th,td):nth-child(6),
+ .print-table :is(th,td):nth-child(8){white-space:nowrap;text-align:center}
+ .print-table td:nth-child(3),
+ .print-table td:nth-child(4),
+ .print-table td:nth-child(6),
+ .print-table td:nth-child(8){direction:ltr;font-variant-numeric:tabular-nums}
+ .print-table :is(th,td):nth-child(7){word-break:normal}
+ .print-table :is(th,td):nth-child(2){width:25%}
+
 }
 
 @media screen {
