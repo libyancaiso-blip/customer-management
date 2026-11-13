@@ -58,6 +58,13 @@ nav button.active{background:linear-gradient(145deg,#f6d48a,#bd8d3d);color:#1023
  .print-header h1{color:#111}
 }
 
+@media screen {
+  body > header {
+    padding-top: calc(15px + env(safe-area-inset-top, 0px));
+    padding-right: max(14px, env(safe-area-inset-right, 0px));
+    padding-left: max(14px, env(safe-area-inset-left, 0px));
+  }
+}
 </style></head><body>
 <div id="lockScreen"><div class="lockbox"><img src="icon-512.png" alt="شعار صخر العرب"><h2>منظومة صخر العرب</h2><p>معاملات الأغراض الشخصية 2000$</p><div id="setupLock" class="hidden"><p>أنشئ رمز دخول من 6 أرقام أو أكثر. احتفظ به في مكان آمن.</p><input id="setupPin" type="password" inputmode="numeric" autocomplete="new-password" placeholder="رمز جديد (6 أرقام فأكثر)"><input id="confirmPin" type="password" inputmode="numeric" autocomplete="new-password" placeholder="تأكيد الرمز"><button class="btn gold" id="setPinBtn">إنشاء الرمز والدخول</button></div><div id="unlockLock" class="hidden"><p>أدخل الرقم السري لفتح المنظومة</p><input id="unlockPin" type="password" inputmode="numeric" autocomplete="off" placeholder="الرقم السري"><button class="btn gold" id="unlockBtn">فتح المنظومة</button></div><p id="lockMessage" class="lockmsg"></p><p>هذا قفل دخول محلي وليس تشفيراً لقاعدة البيانات. احتفظ بنسخ احتياطية آمنة.</p></div></div>
 <header><div class="brand"><img src="icon-192.png" alt="شعار صخر العرب"><div><h1>منظومة صخر العرب<br>لمعاملات الأغراض الشخصية 2000$</h1><p>إدارة العملاء • طباعة منظمة • حفظ محلي</p></div><div class="header-actions"><button id="lockNow" class="iconbtn">🔒 قفل</button></div></div></header>
